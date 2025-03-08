@@ -1,5 +1,5 @@
 //Usage: adjustCSSRules('#myDiv', 'width: 300px !important', "folder/file.css");     "folder/file.css" Sheetpath is optional
-function adjustCSSRules(selector, props, sheets){
+export function adjustCSSRules(selector, props, sheets){
     try {
         // get stylesheet(s)
         if (!sheets) sheets = [...document.styleSheets];
