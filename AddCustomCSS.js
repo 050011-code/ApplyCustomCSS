@@ -1,5 +1,6 @@
 //Usage: adjustCSSRules('#myDiv', 'width: 300px !important', "folder/file.css");     "folder/file.css" path is optional
 export function adjustCSSRules(selector, props, sheets, verbose){
+    console.log("Verbose: " + verbose);
     if (verbose) {console.log("Running in verbose mode!");}
     try {
         // get stylesheet(s)
