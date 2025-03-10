@@ -1,19 +1,23 @@
 //Usage: adjustCSSRules('#myDiv', 'width: 300px !important', "folder/file.css");     "folder/file.css" path is optional
-export function adjustCSSRules(selector, props, sheets){
+export function adjustCSSRules(selector, props, sheets, verbose = false){
     try {
         // get stylesheet(s)
         if (!sheets) sheets = [...document.styleSheets];
+            
         else if (sheets.sup){// sheets is a string
             let absoluteURL = new URL(sheets, document.baseURI).href;
             sheets = [...document.styleSheets].filter(i => i.href == absoluteURL);
         }
         else sheets = [sheets]; // sheets is a stylesheet
+        if (verbose) console.log(sheets);
 
 
         // CSS (& HTML) reduce spaces in selector to one.
         selector = selector.replace(/\s+/g, ' ');
         const findRule = s => [...s.cssRules].reverse().find(i => i.selectorText == selector)
+        if (verbose) console.log(findRule);
         let rule = sheets.map(findRule).filter(i=>i).pop()
+        if (verbose) console.log(rule);
 
         const propsArr = props.sup
         ? props.split(/\s*;\s*/).map(i => i.split(/\s*:\s*/)) // from string
