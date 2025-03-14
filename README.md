@@ -31,5 +31,5 @@ Examples:
 adjustCSSRules('#myDiv', { width: '50%', height: '200px' }); // all stylesheets
 adjustCSSRules('#myDiv', 'width: 30px; color: blue', {sheets: 'style.css'}); // style.css only  
 adjustCSSRules('#myDiv  .myClass', 'width: 30px', {sheets: document.styleSheets[0]}); // Apply to both '#myDiv' and '.myClass' and only first stylesheet
-adjustCSSRules('#myDiv  .myClass', 'width: 30px', {sheets: document.styleSheets[0], verbose: true, addElementInstead: true}); // All options at once
+adjustCSSRules('#myDiv  .myClass', 'width: 30px', {sheets: document.styleSheets[0], verbose: true, addElementInstead: true}); // All options at once, but the addElementInstead will override the css file input
 ```
