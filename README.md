@@ -22,11 +22,14 @@ The method takes three arguments:
 - verbose (Optional) [Boolean]
   - Print processes to console, useful for debugging
 
+- addElementInstead (Optional) [Boolean]
+  - if set to true, the function will create a stylesheet element in the html body to add the elements to, instead of changing the document.styleSheets
+
 Examples:
 
 ```js
 adjustCSSRules('#myDiv', { width: '50%', height: '200px' }); // all stylesheets
 adjustCSSRules('#myDiv', 'width: 30px; color: blue', {sheets = 'style.css'}); // style.css only  
 adjustCSSRules('#myDiv  .myClass', 'width: 30px', {sheets = document.styleSheets[0]}); // Apply to both '#myDiv' and '.myClass' and only first stylesheet
-adjustCSSRules('#myDiv  .myClass', 'width: 30px', {sheets = document.styleSheets[0], verbose = true}); // All options at once
+adjustCSSRules('#myDiv  .myClass', 'width: 30px', {sheets = document.styleSheets[0], verbose = true, addElementInstead: true}); // All options at once
 ```
