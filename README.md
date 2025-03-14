@@ -11,7 +11,7 @@ The method takes three arguments:
   * Whitespaces are auto-reduced (``.myClass     #myDiv`` will match ``.myClass #myDiv``)
 
 - rules [CSS String, Object] - eg (either is acceptable):
-  - { border: "solid 3px green", color: "white" }
+  - { border: "solid 3px green", color: "white" } - must put all properties in quotations
   - 'border: solid 3px green; color: white'
 
 - sheet (Optional) [String, StyleSheet]
@@ -25,8 +25,8 @@ The method takes three arguments:
 Examples:
 
 ```js
-adjustCSSRules('#myDiv', {width: '30px'}); // all stylesheets
-adjustCSSRules('#myDiv', 'width: 30px', {sheets = 'style.css'}); // style.css only  
+adjustCSSRules('#myDiv', { width: '50%', height: '200px' }); // all stylesheets
+adjustCSSRules('#myDiv', 'width: 30px; color: blue', {sheets = 'style.css'}); // style.css only  
 adjustCSSRules('#myDiv  .myClass', 'width: 30px', {sheets = document.styleSheets[0]}); // Apply to both '#myDiv' and '.myClass' and only first stylesheet
 adjustCSSRules('#myDiv  .myClass', 'width: 30px', {sheets = document.styleSheets[0], verbose = true}); // All options at once
 ```
