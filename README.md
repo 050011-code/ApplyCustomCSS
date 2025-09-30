@@ -2,7 +2,8 @@
 Javascript function to apply CSS to the DOM by passing in selector and properties.
 
 # Usage:
-Link to the raw github file and then use the function in your code.
+Link the raw github file and then use the function in your code.
+I use it for Tampermonkey.
 
 #### Arguments
 The method takes 2 required arguments and 3 optional arguments:
