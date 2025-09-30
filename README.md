@@ -17,7 +17,7 @@ The method takes 2 required arguments and 3 optional arguments:
   - 'border: solid 3px green; color: white'
 
 - sheet (Optional) [String, StyleSheet]
-  - if empty, all stylesheets will be checked to edit the rule.
+  - If empty, all stylesheets will be checked to edit the rule.
   - 'myStyles.css' - A relative or absolute URL to sheet.
   - document.styleSheets[1] - A reference to a sheet.
 
