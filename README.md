@@ -17,15 +17,15 @@ The method takes 2 required arguments and 3 optional arguments:
   - 'border: solid 3px green; color: white'
 
 - sheet (Optional) [String, StyleSheet]
-  - if empty, all stylesheets will be checked
-  - 'myStyles.css' A relative or absolute URL to sheet
-  - document.styleSheets[1] - A reference to a sheet
+  - if empty, all stylesheets will be checked to edit the rule.
+  - 'myStyles.css' - A relative or absolute URL to sheet.
+  - document.styleSheets[1] - A reference to a sheet.
 
 - verbose (Optional) [Boolean]
-  - Print stuff to console, useful for debugging
+  - Print stuff to console, useful for debugging.
 
 - addElementInstead (Optional) [Boolean]
-  - if set to true, the function will create a stylesheet element in the html body to add the elements to, instead of changing the document.styleSheets
+  - If set to true, the function will append a stylesheet element to the html body, instead of changing the document.styleSheets.
 
 Examples:
 
