@@ -1,8 +1,9 @@
 # ApplyCustomCSS
-Javascript function to apply CSS to the DOM by passing in selector and properties.
+Javascript function to apply CSS to the DOM by passing in selectors and properties.
 
 # Usage:
 Link the raw github file and then use the function in your code.
+<br>
 I use it for Tampermonkey.
 
 #### Arguments
